@@ -38,15 +38,15 @@ export const List = () => {
 
   return (
     <>
-      <ul>
+      <ul className='list'>
         {state.map(item => (
-          <li key={item} onClick={onRemove(item)}>
+          <li className='removeLi' key={item} onClick={onRemove(item)}>
             {item}
           </li>
         ))}
       </ul>
-      <input value={text} onChange={updateText} />
-      <button onClick={onAdd}>Add item</button>
+      <input className='input' value={text} onChange={updateText} />
+      <button className='addButton' onClick={onAdd}>Add item</button>
     </>
   );
 };
